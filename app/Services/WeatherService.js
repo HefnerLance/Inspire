@@ -4,18 +4,21 @@ import { ProxyState } from "../AppState.js";
 const weatherApi=axios.create({
     baseURL: 'https://bcw-sandbox.herokuapp.com/api/weather'
 })
-function _drawWeather(arg0, _drawWeather) {
-    throw new Error("Function not implemented.");
-}
+
 class WeatherService{
     constructor(){
         console.log("this is weather service");
+        
     }
     async getWeather(){
         let res= await weatherApi.get("", )
         console.log("the res" , res);
-        ProxyState.weather
+        ProxyState.weather = res.data
+        console.log("the res.data", res.data)
+
     }
+
+    
 }
 
 export const weatherService = new WeatherService()

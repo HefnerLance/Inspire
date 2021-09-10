@@ -2,9 +2,22 @@
 
     export class weather{
         constructor(weatherData){
-            this.coord= weatherData.coord
-            this.weatherId = weatherData.weather["id"]
+            
+            this.weather = weatherData.weather
+            this.temp = weatherData.main.temp
+            this.highTemp= weatherData.temp_max
+            this.lowTemp = weatherData.main[2]
 
+        }
+
+        get Template(){
+            return /*html*/`
+                <div>
+                    <h5 class="card-title">${this.weather}</h5>
+                    <p class="card-text">temperature is: ${this.temp}</p>
+                
+                
+            </div>`
         }
     }
     // {
