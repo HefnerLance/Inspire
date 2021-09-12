@@ -15,9 +15,9 @@ class WeatherService{
     async getWeather(weatherData){
         let res= await weatherApi.get("")
         
-        console.log("the res" , res);
+       
         ProxyState.weather =  new Weather(res.data)
-        console.log("the res.data", res.data)
+      
 
     }
     //  async convertTempF(){

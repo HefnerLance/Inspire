@@ -3,4 +3,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.hover:hover + .hide{
+display:block
+}
+.hide{
+    display: none;
+}
 /* background-image: url(https://bcw-sandbox.herokuapp.com/api/images); */

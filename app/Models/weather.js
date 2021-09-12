@@ -20,9 +20,9 @@
                 <div>
                 <p class=" text-center">${this.name}</p>
                     <h5 class="card-title text-center">${this.weather}</h5>
-                    <p class="card-text">Kelvin: ${this.temp} </p>
-                    <p class= "card-text">Celsius: ${this.Celcius} </p>
-                    <p class= "card-text">Fahrenheit: ${this.farenthite}</p>
+                    <p class="card-text text-center">Kelvin: ${this.temp} </p>
+                    <p class= "card-text text-center" id="C" onclick="app.weatherController.toggleUnits()">Celsius: ${this.Celcius} </p>
+                    <p class= "card-text text-center visually-hidden" id="F" onclick="app.weatherController.toggleBack()">Fahrenheit: ${this.farenthite}</p>
                 
                 
             </div>

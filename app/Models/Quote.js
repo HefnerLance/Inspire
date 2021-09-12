@@ -1,4 +1,4 @@
-import { ProxyState } from "../AppState"
+import { ProxyState } from "../AppState.js"
 
 export default class Quote{
     constructor(quoteData){
@@ -13,7 +13,9 @@ export default class Quote{
         <div class="card">
         <div class="card-header">
             <div class="card-body">
-            <p>${ProxyState.quotes.data}</p></div>
+            <p>${ProxyState.quotes}</p>
+            <p class="visually-hidden">${ProxyState.author}</p>
+            </div>
         </div>
         </div>
         `

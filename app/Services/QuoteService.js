@@ -7,6 +7,12 @@ const quotesApi=axios.create({
 })
 
 export class QuoteService{
+    async getAuthor() {
+        let res =await quotesApi.get("")
+        ProxyState.author = res.data.author
+        console.log("author", ProxyState.author);
+        
+    }
     constructor(){
          
     }

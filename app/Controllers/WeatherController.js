@@ -22,6 +22,14 @@ export class weatherController{
     } catch (error) {
         console.log("weather conroller", error)
     }}
+    toggleUnits(){
+        document.getElementById('F').classList.toggle("visually-hidden")
+        document.getElementById('C').classList.toggle("visually-hidden")
+    }
+    toggleBack(){
+        document.getElementById('C').classList.toggle("visually-hidden")
+        document.getElementById('F').classList.toggle("visually-hidden")
+    }
     // getcelcius(){
     //     try {
     //         weatherService.convertTempF()
