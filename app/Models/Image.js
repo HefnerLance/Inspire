@@ -1,4 +1,4 @@
-export class Image{
+export  default class Image{
 
     constructor (imgData){
         this.imgUrl=imgData.url

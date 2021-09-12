@@ -1,23 +1,32 @@
 
 
-    export class weather{
+    export default class Weather{
         constructor(weatherData){
-            
-            this.weather = weatherData.weather
+            this.name= weatherData.name
+            this.weather = weatherData.weather[0].description
             this.temp = weatherData.main.temp
             this.highTemp= weatherData.temp_max
             this.lowTemp = weatherData.main[2]
+            this.Celcius = Math.round(weatherData.main.temp-273.15)
+            this.farenthite = Math.round((this.Celcius* 2) +30)
+            
 
         }
 
         get Template(){
             return /*html*/`
+
+               
                 <div>
-                    <h5 class="card-title">${this.weather}</h5>
-                    <p class="card-text">temperature is: ${this.temp}</p>
+                <p class=" text-center">${this.name}</p>
+                    <h5 class="card-title text-center">${this.weather}</h5>
+                    <p class="card-text">Kelvin: ${this.temp} </p>
+                    <p class= "card-text">Celsius: ${this.Celcius} </p>
+                    <p class= "card-text">Fahrenheit: ${this.farenthite}</p>
                 
                 
-            </div>`
+            </div>
+            `
         }
     }
     // {

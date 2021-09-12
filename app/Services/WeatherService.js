@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import Weather from "../Models/Weather.js";
 
 // @ts-ignore
 const weatherApi=axios.create({
@@ -8,15 +9,23 @@ const weatherApi=axios.create({
 class WeatherService{
     constructor(){
         console.log("this is weather service");
-        
+        this.getWeather()
+        // this.convertTempF()
     }
-    async getWeather(){
-        let res= await weatherApi.get("", )
+    async getWeather(weatherData){
+        let res= await weatherApi.get("")
+        
         console.log("the res" , res);
-        ProxyState.weather = res.data
+        ProxyState.weather =  new Weather(res.data)
         console.log("the res.data", res.data)
 
     }
+    //  async convertTempF(){
+    //      let temp = await weatherApi.get("")
+    //     ProxyState.temperature= new Weather(temp.data.main.temp-273)
+    
+    //     console.log(temp);
+    // }
 
     
 }
