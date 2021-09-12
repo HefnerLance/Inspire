@@ -13,7 +13,8 @@ export class QuoteService{
     async getQuotes(quoteData){
         let res= await quotesApi.get("")
         ProxyState.quotes= res.data.content
-        console.log("quote", ProxyState.quotes)
+        ProxyState.author= res.data.author
+        console.log("quote", res.data.author)
         
     }
 }

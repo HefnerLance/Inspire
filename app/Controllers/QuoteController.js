@@ -5,8 +5,8 @@ function _drawQuotes(quoteData){
     let template = ''
     if(ProxyState.quotes){
         template=ProxyState.quotes.Template
-    }
-    document.getElementById('quotes').innerHTML= template
+    }console.log(quoteData);
+    document.getElementById('quotes').innerHTML= quoteData
 }
     export class QuoteController{
         constructor(){
