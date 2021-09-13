@@ -9,6 +9,7 @@ author= null
   weather = null
 
   image= null
+  toDo= []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
