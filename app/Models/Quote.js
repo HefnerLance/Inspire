@@ -12,9 +12,9 @@ export default class Quote{
         
         <div class="card">
         <div class="card-header">
-            <div class="card-body">
+            <div class="card-body text-center m-auto">
             <p>${ProxyState.quotes}</p>
-            <p class="visually-hidden">${ProxyState.author}</p>
+            <p class="visually-hidden text">${ProxyState.author}</p>
             </div>
         </div>
         </div>

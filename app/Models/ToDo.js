@@ -9,9 +9,13 @@ export default class ToDo{
     }
     get Template(){
         return /*html*/`
-        <div class="card">
-        <div> <input type="checkbox" name="checkbox" id="${this.id}" onclick="app.toDoController.checkbox('${this.id}')"
-        ${this.completed ? "checked" : ""} >${this.description} <p onclick="app.toDoController.deleteToDo('${this.id}')">Delete</p></div>
+        <div class="card m-auto">
+        <div class="pb-2"> 
+        <label for="checkbox">Completed:</label>
+        <input type="checkbox" name="checkbox" id="${this.id}" onclick="app.toDoController.checkbox('${this.id}')"
+        ${this.completed ? "checked" : ""} >
+        <p>${this.description} </p>
+        <p onclick="app.toDoController.deleteToDo('${this.id}')">Delete</p></div>
         </div>
         `
     }
