@@ -26,13 +26,13 @@
   </header>
   <main>
     <div class="container-fluid ">
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-2">
           
         </div>
-        <div class="col-8" >
+        <div class="col-lg-8" >
           <div id= "mainCard " class="justify-content-center">
-            <div class="text-center text-light" id="time"></div>
+            <div class="text-center text-light bg-dark" id="time"></div>
             <!-- the card with time and weather location goes in here -->
             <div class="card justify-content-center" id="weather" >
               
@@ -41,10 +41,11 @@
           </div>
 
         </div>
-        <div class="col-2 d-flex card" >
-          <form name="name" id="name" onsubmit="app.toDoController.addToDo()">
+        <div class="col-lg-2 d-flex card m-auto" >
+          <span id="count">0 <span id="counted">0 </span> </span>
+          <form name="name" id="name" onsubmit="app.toDoController.addToDo()" required="true">
           <input type="text" id="name" name="name">
-          <button type= "submit">New Task</button><span id="count">0 <span id="counted">0 </span> </span>
+          <button type= "submit">New Task</button>
         </form>
         
           <div id="todo"></div>
@@ -55,12 +56,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
-          <div class="card hover" id="quotes" onmouseover="">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <div class="card hover text-center" id="quotes" onmouseover="">
             
           </div>
-          <div class="card hide" id="author">
-
+          <div class="card hide text-center" id="author">
+            <div class="col-lg-2"></div>
           </div>
         </div>
       </div>

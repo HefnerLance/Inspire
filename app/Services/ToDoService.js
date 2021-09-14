@@ -29,7 +29,7 @@ class ToDoService{
         
         let res= await toDoApi.get("")
         console.log("todo", res)
-        debugger
+       
         ProxyState.toDo = res.data.map(t => new ToDo(t))
         console.log( "later",ProxyState.toDo);
         ProxyState.count= ProxyState.toDo.length

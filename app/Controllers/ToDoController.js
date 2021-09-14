@@ -8,7 +8,7 @@ let template=''
 ProxyState.toDo.forEach(t => template += t.Template)
 document.getElementById('todo').innerHTML= template
 let count =ProxyState.toDo.filter(c=> c.completed);
-document.getElementById('count').innerHTML=`${count.length} of ${ProxyState.toDo.length}`
+document.getElementById('count').innerHTML=` completed:${count.length} of ${ProxyState.toDo.length}`
 
 }
 // function _drawcount() {
