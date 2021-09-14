@@ -41,10 +41,10 @@
           </div>
 
         </div>
-        <div class="col-2">
+        <div class="col-2 d-flex card" >
           <form name="name" id="name" onsubmit="app.toDoController.addToDo()">
           <input type="text" id="name" name="name">
-          <button type= "submit">New Task</button>
+          <button type= "submit">New Task</button><span id="count">0 <span id="counted">0 </span> </span>
         </form>
         
           <div id="todo"></div>

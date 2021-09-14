@@ -9,7 +9,7 @@ const toDoApi =axios.create({
 class ToDoService{
     async checkbox(id) {
         let foundtodo= ProxyState.toDo.find(t => t.id ==id)
-        debugger
+        
        if (foundtodo.completed == false) {
            foundtodo.completed= true   
         }else(foundtodo.completed= false)
@@ -29,9 +29,11 @@ class ToDoService{
         
         let res= await toDoApi.get("")
         console.log("todo", res)
+        debugger
         ProxyState.toDo = res.data.map(t => new ToDo(t))
         console.log( "later",ProxyState.toDo);
-
+        ProxyState.count= ProxyState.toDo.length
+        console.log(ProxyState.count);
     }
     async postToDo(){
         let res = await toDoApi.post("", new ToDo)

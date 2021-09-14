@@ -7,7 +7,15 @@ function _drawToDo(){
 let template=''
 ProxyState.toDo.forEach(t => template += t.Template)
 document.getElementById('todo').innerHTML= template
+let count =ProxyState.toDo.filter(c=> c.completed);
+document.getElementById('count').innerHTML=`${count.length} of ${ProxyState.toDo.length}`
+
 }
+// function _drawcount() {
+//     ProxyState.count= ProxyState.toDo.length
+//     document.getElementById('count').innerHTML= ProxyState.count
+// }
+
 
 
 
@@ -15,7 +23,9 @@ export class ToDoController{
     constructor(){
         this.getToDo()
         ProxyState.on('toDo', _drawToDo)
-        ProxyState.on('count', )
+         
+        
+        
         
     }
     async getToDo(){
@@ -55,8 +65,10 @@ export class ToDoController{
     async checkbox(id){
         try {
             toDoService.checkbox(id)
+            _drawToDo()
         } catch (error) {
             
         }
     }
 }
+
