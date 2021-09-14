@@ -28,11 +28,11 @@
     <div class="container-fluid ">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-2">
-          <div class="text-center text-light" id="time"></div>
-
+          
         </div>
         <div class="col-8" >
           <div id= "mainCard " class="justify-content-center">
+            <div class="text-center text-light" id="time"></div>
             <!-- the card with time and weather location goes in here -->
             <div class="card justify-content-center" id="weather" >
               
@@ -42,9 +42,16 @@
 
         </div>
         <div class="col-2">
+          <form name="name" id="name" onsubmit="app.toDoController.addToDo()">
+          <input type="text" id="name" name="name">
+          <button type= "submit">New Task</button>
+        </form>
+        
+          <div id="todo"></div>
           <!-- todo goes in here -->
           
-
+          
+        </div>
         </div>
       </div>
       <div class="row">
